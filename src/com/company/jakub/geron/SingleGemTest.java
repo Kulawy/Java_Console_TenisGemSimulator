@@ -69,12 +69,22 @@ public class SingleGemTest {
     }
 
     @Test
-    public void checkDisplayScoreFor66(){
-        for( int i = 0; i <= 10; i++){
+    public void checkDisplayScoreFor99(){
+        for( int i = 0; i < 10; i++){
             game.setBallWinner(1);
             game.setBallWinner(2);
         }
         assertEquals("40:40", game.displayScore());
+    }
+
+    @Test
+    public void checkDisplayScoreFor89(){
+        for( int i = 0; i < 8; i++){
+            game.setBallWinner(1);
+            game.setBallWinner(2);
+        }
+        game.setBallWinner(2);
+        assertEquals("40:A", game.displayScore());
     }
 
 }
