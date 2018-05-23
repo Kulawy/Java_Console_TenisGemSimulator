@@ -54,6 +54,8 @@ public class GameInterface {
             actualGame.setBallWinner(scanner.nextInt());
         }
         displayWinner();
+        System.out.println("Press any key to end");
+        scanner.next();
     }
 
 }
