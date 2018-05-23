@@ -54,8 +54,12 @@ public class GameInterface {
             actualGame.setBallWinner(scanner.nextInt());
         }
         displayWinner();
-        System.out.println("Press any key to end");
-        scanner.next();
+        System.out.println("Press Enter to exit");
+        try {
+            System.in.read();
+        }catch (IOException exception){
+            System.out.println("Error");
+        }
     }
 
 }
